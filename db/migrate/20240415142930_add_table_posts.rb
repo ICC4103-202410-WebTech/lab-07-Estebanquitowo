@@ -6,8 +6,9 @@ class AddTablePosts < ActiveRecord::Migration[7.1]
       t.datetime :published_at, null: false
       t.integer :answers_count, null: false, default: 0
       t.integer :likes_count, null: false, default: 0
-
       t.timestamps
+      belongs_to :user
+
     end
   end
 end
